@@ -12,6 +12,7 @@
     "logger",
     "log"
   ],
+  "comment": "This is a fork of the original monolog-cascade package. The original package is lacking some updates and features that we need. This fork is intended to be a temporary solution until the original package is updated.",
   "authors": [
     {
       "name": "Raphaël Antonmattei",
