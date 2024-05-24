@@ -14,10 +14,10 @@
     "homepage": "https://github.com/theorchard/monolog-cascade",
     "require": {
         "php": ">=7.2",
-        "symfony/config": "^2.7 || ^3.0 || ^4.0 || ^5.0",
-        "symfony/options-resolver": "^2.7 || ^3.0 || ^4.0 || ^5.0",
-        "symfony/serializer": "^2.7 || ^3.0 || ^4.0 || ^5.0",
-        "symfony/yaml": "^2.7 || ^3.0 || ^4.0 || ^5.0",
+        "symfony/config": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0",
+        "symfony/options-resolver": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0",
+        "symfony/serializer": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0",
+        "symfony/yaml": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0",
         "monolog/monolog": "^1.13 || ^2.0"
     },
     "autoload": {
@@ -32,15 +32,15 @@
     },
     "require-dev": {
         "mikey179/vfsstream": "^1.6",
-        "phpunit/phpcov": "^6.0",
-        "phpunit/phpunit": "^8.5",
-        "php-coveralls/php-coveralls": "^1.0",
+        "phpunit/phpcov": "^7.0",
+        "phpunit/phpunit": "^9.0",
+        "php-coveralls/php-coveralls": "^2.0",
         "squizlabs/php_codesniffer": "^2.5"
     },
     "prefer-stable": true,
     "extra": {
         "branch-alias": {
-            "dev-master": "0.5.x-dev"
+            "dev-master": "0.6.x-dev"
         }
     }
 }
