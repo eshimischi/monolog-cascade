@@ -18,6 +18,7 @@ use Cascade\Config\Loader\FileLoader\Json as JsonLoader;
 use Cascade\Config\Loader\FileLoader\PhpArray as ArrayFromFileLoader;
 use Cascade\Config\Loader\FileLoader\Yaml as YamlLoader;
 use Cascade\Config\Loader\PhpArray as ArrayLoader;
+use Symfony\Component\Config\Loader\LoaderResolverInterface;
 
 /**
  * Loader class that loads Yaml, JSON and array from various resources (file, php array, string)
@@ -37,8 +38,15 @@ class ConfigLoader extends DelegatingLoader
      * Instantiate a Loader object
      * @todo have the locator passed to the constructor so we can load more than one file
      */
-    public function __construct()
+    public function __construct(LoaderResolverInterface $resolver = null)
     {
+		if ($resolver !== null) {
+			parent::__construct($resolver);
+			return;
+		}
+
+		// Set up the Loader resolver if not given.
+
         $this->locator = new FileLocator();
 
         $loaderResolver = new LoaderResolver(array(
@@ -61,8 +69,7 @@ class ConfigLoader extends DelegatingLoader
      *
      * @return array Array of config options
      */
-    public function load($resource, $type = null)
-    {
+    public function load($resource, $type = null) : mixed {
         return parent::load($resource);
     }
 }

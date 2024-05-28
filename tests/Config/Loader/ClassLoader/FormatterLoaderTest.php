@@ -80,7 +80,7 @@ class FormatterLoaderTest extends TestCase
     {
         // Setup mock and expectations
         $mock = $this->getMockBuilder($class)
-            ->setMethods(array($methodName))
+            ->onlyMethods(array($methodName))
             ->getMock();
 
         $mock->expects($this->once())

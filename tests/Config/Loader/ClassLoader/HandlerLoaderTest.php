@@ -162,7 +162,7 @@ class HandlerLoaderTest extends TestCase
         // Setup mock and expectations
         $mock = $this->getMockBuilder($class)
             ->disableOriginalConstructor()
-            ->setMethods(array($methodName))
+            ->onlyMethods(array($methodName))
             ->getMock();
 
         $mock->expects($this->once())
@@ -254,7 +254,7 @@ class HandlerLoaderTest extends TestCase
         // Setup mock and expectations
         $mockHandler = $this->getMockBuilder('Monolog\Handler\TestHandler')
             ->disableOriginalConstructor()
-            ->setMethods(array('pushProcessor'))
+            ->onlyMethods(array('pushProcessor'))
             ->getMock();
 
         $mockHandler->expects($this->exactly(sizeof($processorsArray)))
